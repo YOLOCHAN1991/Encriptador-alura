@@ -1,12 +1,88 @@
 
-header{
-    background: green;
+.hidden{
+    display: none;
 }
 
-main{
+body{
+    background:#d0dafd;
+}
+
+.container{
+    width: 95%;
+    height: 95vh;
+    margin: 2.5vh auto;
+    /*background: red;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.logo-div{
+    display: inline-block;
+    width: 10%;
     background: blue;
+    
 }
 
-footer{
-    background: red;
+.center-div{
+    display: inline-block;
+    width: 60%;
+    
+    background: gray;
 }
+
+.center-div textarea{
+    display: inline-block;
+    font-size: 22px;
+    resize: none;
+    width: 47%;
+    
+}
+
+.encrypted-div{
+    height: 100%;
+    background: white;
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 2rem 1rem;
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+
+.encrypted-div p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: #495057;
+    text-align: left;
+    margin: 0 auto;
+    width: 90%;
+    height: 90%;
+    
+}
+
+.encrypted-div button{
+    width: 90%;
+    height: 7%;
+    margin: 1rem 0;
+    border: #0A3871 1px solid;
+    background: white;
+    color: #0A3871;
+    font-size: 1.3rem;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 768px){
+    .container{
+        width: 100%;
+    } 
+}
+
