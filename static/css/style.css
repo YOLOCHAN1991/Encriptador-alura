@@ -3,48 +3,62 @@
     display: none;
 }
 
-body{
-    background:#d0dafd;
-}
-
-.container{
-    width: 95%;
-    height: 95vh;
-    margin: 2.5vh auto;
-    /*background: red;*/
+.flex{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: stretch;
 }
 
+body{
+    background: #E9ECF8;
+}
+
+.container{
+    width: 95%;
+    height: 95vh;
+    margin: 2.5vh auto;
+}
+
 .logo-div{
-    display: inline-block;
-    width: 10%;
-    background: blue;
-    
+    width: 10%; 
+}
+
+.logo-div svg{
+    position: relative;
+    left: 30px;
+    top: 23px;
 }
 
 .center-div{
     display: inline-block;
     width: 60%;
-    
-    background: gray;
+    box-sizing: border-box;
+
 }
 
 .center-div textarea{
-    display: inline-block;
-    font-size: 22px;
+    width: 85%;
+    height: 80%;
+    margin: 0 auto;
+    padding: 6rem 1rem 0;
+    font-size: 2rem;
+    line-height: 3rem;
     resize: none;
-    width: 47%;
-    
+    color: #0A3871;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    background: none;
+    border: none;
+    outline: none;
 }
 
 .encrypted-div{
     height: 100%;
     background: white;
-    display: inline-block;
-    width: 30%;
+    width: 27%;
     text-align: center;
     box-sizing: border-box;
     padding: 2rem 1rem;
@@ -53,7 +67,58 @@ body{
     border-radius: 32px;
 }
 
-.encrypted-div p{
+.encriptado, .not-message{
+    height: 100%;
+}
+
+.not-message{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.not-message svg{
+    width: 100%;
+    height: 50%;
+}
+
+.not-message h2{
+    width: 90%;
+    height: 58px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 120%;
+    /* or 29px */
+
+    text-align: center;
+
+    /* Gray/gray-500 */
+
+    color: #343A40;
+}
+
+.not-message p{
+    width: 90%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 140%;
+    /* or 27px */
+
+    text-align: center;
+
+    /* Gray/gray-500 */
+
+    color: #6C757D;
+}
+
+
+.encriptado p{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -67,7 +132,7 @@ body{
     
 }
 
-.encrypted-div button{
+.encriptado button{
     width: 90%;
     height: 7%;
     margin: 1rem 0;
