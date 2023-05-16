@@ -1,4 +1,7 @@
 
+/* Inicio css stylesheet*/
+
+
 .hidden{
     display: none;
 }
@@ -15,33 +18,35 @@ body{
 }
 
 .container{
-    width: 95%;
-    height: 95vh;
-    margin: 2.5vh auto;
+    margin:1rem;
 }
 
+/* logo div css*/
+
 .logo-div{
-    width: 10%; 
+    width: 10vw; 
 }
 
 .logo-div svg{
-    position: relative;
-    left: 30px;
-    top: 23px;
+    margin: 10px 0 0 23px;
 }
+
+/* fin logo div css*/
+
+/* center div css*/
 
 .center-div{
-    display: inline-block;
-    width: 60%;
-    box-sizing: border-box;
-
+    width: 60vw;
 }
 
+
 .center-div textarea{
+    display:block;
+    box-sizing: border-box;
     width: 85%;
-    height: 80%;
-    margin: 0 auto;
-    padding: 6rem 1rem 0;
+    height: 82vh;
+    padding: 6rem 0 0 1rem;
+
     font-size: 2rem;
     line-height: 3rem;
     resize: none;
@@ -55,10 +60,56 @@ body{
     outline: none;
 }
 
+.center-div svg{
+    display: inline-block;
+    padding-right: .3rem;
+    vertical-align: middle;
+}
+
+.center-div p{
+    margin-top: 1rem;
+    display: inline-block;
+    width: 90%;
+    font-size: .8rem;
+    color: #495057;
+    opacity: 0.8;
+    
+    
+}
+
+.center-div button{
+    height: 8vh;
+    width: 45%;
+    margin-top: .8rem;
+    border-radius: 18px;
+}
+
+.btn-encrypt{
+    border: none;
+    color: white;
+    background: #0A3871;
+    transition: 200ms all;
+}
+
+.btn-decrypt{
+    color: #0A3871;
+    border: #0A3871 1px solid;
+    
+    transition: 200ms all;
+}
+
+.btn-encrypt:hover, .btn-decrypt:hover, .encriptado button:hover{
+    transform: scale(102%);
+}
+
+/*fin centerr div css*/
+
+/*inicio encrypted div css*/
+
 .encrypted-div{
-    height: 100%;
+    min-height: 100vh;
     background: white;
-    width: 27%;
+    width: 24vw;
     text-align: center;
     box-sizing: border-box;
     padding: 2rem 1rem;
@@ -67,12 +118,14 @@ body{
     border-radius: 32px;
 }
 
+
 .encriptado, .not-message{
     height: 100%;
 }
 
+/*inicio not message css*/
+
 .not-message{
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -85,6 +138,8 @@ body{
 }
 
 .not-message h2{
+    position: relative;
+    bottom: 2rem;
     width: 90%;
     height: 58px;
     font-family: 'Inter';
@@ -102,6 +157,8 @@ body{
 }
 
 .not-message p{
+    position: relative;
+    bottom: 1rem;
     width: 90%;
     font-family: 'Inter';
     font-style: normal;
@@ -117,7 +174,9 @@ body{
     color: #6C757D;
 }
 
+/* fin not message css*/
 
+/*inicio encriptado css*/
 .encriptado p{
     font-family: 'Inter';
     font-style: normal;
@@ -129,6 +188,8 @@ body{
     margin: 0 auto;
     width: 90%;
     height: 90%;
+    word-break: break-all;
+    white-space: normal;
     
 }
 
@@ -145,9 +206,71 @@ body{
 }
 
 
+
+/*fin encriptado css*/
+
 @media screen and (max-width: 768px){
-    .container{
+
+
+    .logo-div{
         width: 100%;
-    } 
+        height:auto;
+    }
+
+    .center-div{
+        width: 100%;
+        text-align: center;
+        height: auto;
+        padding: 2rem 0 3.5rem;
+    }
+
+    .center-div textarea{
+        height: 50vh;
+        padding-top: 4rem;
+    }
+
+    .center-div p{
+        text-align: left;
+        font-size: .7rem;
+    }
+
+    .center-div button{
+        width: 49%;
+    }
+
+    .encrypted-div{
+        width: 100%;
+        min-height: 2vh;
+        /* shadow */
+        box-shadow: 0px 3px 32px 2px rgba(0, 0, 0, 0.18);
+        border-radius: 32px;
+    }
+        
+    .encrypted-div svg{
+        display: none;
+    }
+
+
+    .not-message h2, .not-message p{
+        height: auto;
+        bottom: 0;
+    }
+
+    .encriptado p{
+        height:auto;
+    }
+
+    .encriptado button{
+        width: 100%;
+        height: 10vh;
+        margin-bottom: 0;
+    }
+
+    
 }
 
+@media screen and (max-width: 375px){
+    .center-div button{
+        width: 100%;
+    }
+}
